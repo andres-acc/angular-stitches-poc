@@ -1,12 +1,24 @@
 .navbar {
-  // background-color: black;
-  // height: 45px;
   display: flex;
-  justify-content: flex-end;
-  // padding: 0 10px;
+  justify-content: space-around;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
-  .theme {
-    // text-align: center;
-    width: 100px;
+  .logo {
+    filter: drop-shadow(
+      5px 5px 5px rgba(64, 94, 130, 1)
+    );
+  }
+
+  .themeSelector {
+    display: flex;
+    align-items: center;
+
+    .selector {
+      border-radius: 15px;
+      padding: 5px;
+      border: none;
+      margin-left: 10px;
+      width: 100px;
+    }
   }
 }

@@ -3,10 +3,11 @@ import { createStitches } from '@stitches/core';
 export const { css } = createStitches({
   theme: {
     colors: {
-      text: 'gray',
-      primary: 'blue',
-      onPrimary: 'white',
-      backgroundColor: 'gray'
+      primary: '#00A0FF',
+      sky: '#E8F9FF',
+      ghost: '#F8F8FF',
+      grass: '#A5CD39',
+      black: '#000'
     },
     sizes: {
       4: '40px',

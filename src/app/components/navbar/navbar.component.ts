@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { map } from 'rxjs';
+import { 
+  ghostStyles, 
+  grassStyles, 
+  primaryStyles, 
+  skyStyles 
+} from 'src/app/theme/theme';
 import { css } from '../../../styles';
 import { ThemeService } from '../../services/theme.service';
 import { classNames } from '../../utility/class-names';
-
-// const $theme = css({
-//   width: "$10"
-// });
 
 @Component({
   selector: 'app-navbar',
@@ -21,16 +23,11 @@ export class NavbarComponent {
 
   theme = classNames({
     nav$: this.themeService.getTheme().pipe(
-      map((option) => {
-        console.log(option);
-        return $navbar({ color: option })
-      })
-    )
+      map((option) => $navbar({ color: option }))
+    ),
   });
 
   changeTheme() {
-    console.log(this.themeSelector);
-    console.log(this.themeSelector.value);
     this.themeService.setTheme(this.themeSelector.value || 'primary');
   }
 }
@@ -39,10 +36,16 @@ const $navbar: any = css({
   variants: {
     color: {
       primary: {
-        backgroundColor: "$primary"
+        ...primaryStyles
       },
-      text: {
-        backgroundColor: "$text",
+      sky: {
+        ...skyStyles
+      },
+      ghost: {
+        ...ghostStyles
+      },
+      grass: {
+        ...grassStyles
       }
     }
   },

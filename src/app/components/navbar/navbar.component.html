@@ -1,13 +1,17 @@
 <nav class="navbar" [ngClass]="theme.nav$ | async">
-  <select 
-    name="theme" 
-    class="theme" 
-    (change)="changeTheme()"
-    [formControl]="themeSelector"
-  >
-    <option value="primary">Primary</option>
-    <option value="text">Text</option>
-    <!-- <option value="">Drone</option>
-    <option value="">Impala</option> -->
-  </select>
+  <img class="logo" src="../../../assets/images/LogoWolox-Original.png" alt="wolox-brand">
+  <div class="themeSelector">
+    <label for="theme">Theme</label>
+    <select 
+      name="theme"
+      class="selector"
+      (change)="changeTheme()"
+      [formControl]="themeSelector"
+    >
+      <option value="primary">Primary</option>
+      <option value="sky">Sky</option>
+      <option value="ghost">Ghost</option>
+      <option value="grass">Grass</option>
+    </select>
+  </div>
 </nav>
