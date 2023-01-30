@@ -1,0 +1,13 @@
+<nav class="navbar" [ngClass]="theme.nav$ | async">
+  <select 
+    name="theme" 
+    class="theme" 
+    (change)="changeTheme()"
+    [formControl]="themeSelector"
+  >
+    <option value="primary">Primary</option>
+    <option value="text">Text</option>
+    <!-- <option value="">Drone</option>
+    <option value="">Impala</option> -->
+  </select>
+</nav>
