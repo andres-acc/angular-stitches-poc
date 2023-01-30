@@ -1,0 +1,22 @@
+.card {
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding:  0 10px 10px 10px;
+  width: 250px;
+
+  .section {
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    height: 100px;
+    margin: 10px auto;
+    background-color: white;  
+    width: 100%;
+
+    .preview {
+      margin: 0 auto;
+    }
+  }
+}

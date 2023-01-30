@@ -15,6 +15,6 @@ export const ghostStyles = {
 
 export const grassStyles = {
   backgroundColor: "$grass",
-  color: "$black",
+  color: "$ghost"
 };
 
