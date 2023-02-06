@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  themeColor = 'bg-grass';
+  themeSelector = new FormControl('grass');
+
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
+    this.themeService.getTheme().subscribe((theme) => this.themeColor = `bg-${theme}`);
   }
 
+  changeTheme() {
+    this.themeService.setTheme(this.themeSelector.value || 'grass')
+  }
 }

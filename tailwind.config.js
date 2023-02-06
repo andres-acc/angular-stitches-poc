@@ -12,4 +12,11 @@ module.exports = {
     }
   },
   plugins: [],
+  safelist: [
+    'bg-primary',
+    'bg-sky',
+    'bg-ghost',
+    'bg-grass',
+    'bg-black'
+  ]
 }
