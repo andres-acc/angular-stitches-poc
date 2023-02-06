@@ -1,3 +1,6 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<app-navbar></app-navbar>
+<section class="flex flex-wrap items-center justify-center gap-5 mt-12 w-full">
+  <ng-container *ngFor="let card of [0,1,2,3,4,5]">
+    <app-card></app-card>
+  </ng-container>
+</section>
